@@ -1,103 +1,98 @@
 import { useEffect } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
 import BrandName from '../components/BrandName';
 
 export default function TermsPage() {
-  const { t, i18n } = useTranslation();
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const lastUpdated = new Date().toLocaleDateString(i18n.language === 'pt' ? 'pt-PT' : 'en-US');
-
   return (
     <div className="pt-24 pb-16 min-h-screen">
       <div className="max-w-4xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">{t('terms.title')}</h1>
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">Terms and Conditions</h1>
         
         <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
-          <p className="text-sm text-gray-400">{t('terms.lastUpdated')}: {lastUpdated}</p>
+          <p className="text-sm text-gray-400">Last updated: {new Date().toLocaleDateString('en-US')}</p>
           
           <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">1. {t('terms.sections.intro.title')}</h2>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">1. Introduction</h2>
             <p>
-              <Trans i18nKey="terms.sections.intro.p1" components={{ brand: <BrandName withAcademy /> }} />
+              Welcome to <BrandName withAcademy />. These Terms and Conditions govern the access and use of our website and the services provided by <BrandName withAcademy />, headquartered at Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal.
             </p>
             <p>
-              {t('terms.sections.intro.p2')}
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">2. {t('terms.sections.services.title')}</h2>
-            <p>
-              <Trans i18nKey="terms.sections.services.p1" components={{ brand: <BrandName withAcademy /> }} />
-            </p>
-            <p>
-              {t('terms.sections.services.p2')}
+              By accessing and using this website, the user agrees to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">3. {t('terms.sections.payments.title')}</h2>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">2. Services</h2>
             <p>
-              {t('terms.sections.payments.p1')}
+              <BrandName withAcademy /> offers professional training courses in the construction industry, including, but not limited to, drywall installation, tiling, and underfloor heating installation.
             </p>
             <p>
-              {t('terms.sections.payments.p2')}
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">4. {t('terms.sections.intellectual.title')}</h2>
-            <p>
-              <Trans i18nKey="terms.sections.intellectual.p1" components={{ brand: <BrandName withAcademy /> }} />
-            </p>
-            <p>
-              {t('terms.sections.intellectual.p2')}
+              Enrollment in courses is subject to availability, meeting admission requirements, and payment of the respective tuition fees, where applicable.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">5. {t('terms.sections.data.title')}</h2>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">3. Enrollments and Payments</h2>
             <p>
-              {t('terms.sections.data.p1')}
+              By submitting an enrollment form, the user guarantees that all information provided is true, accurate, and complete.
+            </p>
+            <p>
+              Specific payment conditions, cancellation, and refund policies will be communicated to the user at the time of formalizing the enrollment in the respective course.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">6. {t('terms.sections.liability.title')}</h2>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">4. Intellectual Property</h2>
             <p>
-              <Trans i18nKey="terms.sections.liability.p1" components={{ brand: <BrandName withAcademy /> }} />
+              All content present on this website, including texts, graphics, logos, icons, images, audio clips, digital downloads, and data compilations, is the property of <BrandName withAcademy /> or its content suppliers and is protected by Portuguese and international copyright laws.
             </p>
             <p>
-              <Trans i18nKey="terms.sections.liability.p2" components={{ brand: <BrandName withAcademy /> }} />
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">7. {t('terms.sections.changes.title')}</h2>
-            <p>
-              {t('terms.sections.changes.p1')}
+              The reproduction, duplication, copying, selling, reselling, or exploitation of any part of the website for commercial purposes without our express written consent is not permitted.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">8. {t('terms.sections.law.title')}</h2>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">5. Data Protection</h2>
             <p>
-              {t('terms.sections.law.p1')}
+              The collection and processing of personal data are carried out in accordance with our Privacy Policy, in strict compliance with the General Data Protection Regulation (GDPR) and other applicable legislation.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">9. {t('terms.sections.contacts.title')}</h2>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">6. Limitation of Liability</h2>
             <p>
-              {t('terms.sections.contacts.p1')}
+              <BrandName withAcademy /> makes every effort to ensure that the information presented on the website is accurate and up-to-date. However, we do not guarantee the absence of errors or omissions.
+            </p>
+            <p>
+              <BrandName withAcademy /> shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this website or the services offered.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">7. Changes to the Terms</h2>
+            <p>
+              We reserve the right to update or modify these Terms and Conditions at any time, without prior notice. Continued use of the website following any changes constitutes acceptance of the new Terms and Conditions.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">8. Applicable Law and Jurisdiction</h2>
+            <p>
+              These Terms and Conditions are governed by and construed in accordance with Portuguese law. For the resolution of any dispute arising from the interpretation or execution of these Terms, the jurisdiction of the district of Faro is competent, with express waiver of any other.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-4">9. Contacts</h2>
+            <p>
+              For any questions related to these Terms and Conditions, please contact us via:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('terms.sections.contacts.phone')}: +351 939 996 924</li>
-              <li>{t('terms.sections.contacts.address')}: Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal</li>
+              <li>Phone: +351 939 996 924</li>
+              <li>Address: Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal</li>
             </ul>
           </section>
         </div>

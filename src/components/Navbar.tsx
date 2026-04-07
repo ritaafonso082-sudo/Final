@@ -2,13 +2,11 @@ import { Info, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import BrandName from './BrandName';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -39,13 +37,13 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wider text-gray-300">
-          <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">{t('navbar.about')}</button>
-          <button onClick={() => scrollTo('how-it-works')} className="hover:text-white transition-colors">{t('navbar.howItWorks')}</button>
-          <button onClick={() => scrollTo('pricing')} className="hover:text-white transition-colors">{t('navbar.pricing')}</button>
-          <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">{t('navbar.courses')}</button>
-          <button onClick={() => scrollTo('professionals')} className="hover:text-white transition-colors">{t('navbar.professionals')}</button>
-          <button onClick={() => scrollTo('partners')} className="hover:text-white transition-colors">{t('navbar.partners')}</button>
-          <button onClick={() => scrollTo('contact-form')} className="hover:text-white transition-colors">{t('navbar.contact')}</button>
+          <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">ABOUT</button>
+          <button onClick={() => scrollTo('how-it-works')} className="hover:text-white transition-colors">HOW IT WORKS</button>
+          <button onClick={() => scrollTo('pricing')} className="hover:text-white transition-colors">PRICING</button>
+          <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">COURSES</button>
+          <button onClick={() => scrollTo('professionals')} className="hover:text-white transition-colors">PROFESSIONALS</button>
+          <button onClick={() => scrollTo('partners')} className="hover:text-white transition-colors">PARTNERS</button>
+          <button onClick={() => scrollTo('contact-form')} className="hover:text-white transition-colors">CONTACT</button>
         </div>
 
         <div className="flex items-center gap-4 md:gap-6">
@@ -55,7 +53,7 @@ export default function Navbar() {
             onClick={() => window.dispatchEvent(new CustomEvent('openNotifyMe'))}
             className="hidden md:block text-white px-2 py-2 rounded-md text-xs font-bold tracking-wider hover:text-[#FFB800] transition-colors"
           >
-            {t('navbar.notifyMe')}
+            NOTIFY ME
           </button>
           
           <motion.button 
@@ -77,7 +75,7 @@ export default function Navbar() {
               }}
               className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 pointer-events-none"
             />
-            <span className="relative z-10">{t('navbar.getStarted')}</span>
+            <span className="relative z-10">GET STARTED</span>
           </motion.button>
 
           <button 
@@ -99,25 +97,25 @@ export default function Navbar() {
             className="lg:hidden bg-[#0a0a0a] border-b border-white/10 overflow-hidden"
           >
             <div className="flex flex-col px-6 py-4 gap-4 text-sm font-semibold tracking-wider text-gray-300">
-              <button onClick={() => { scrollTo('about'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.about')}</button>
-              <button onClick={() => { scrollTo('how-it-works'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.howItWorks')}</button>
-              <button onClick={() => { scrollTo('pricing'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.pricing')}</button>
-              <button onClick={() => { scrollTo('courses'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.courses')}</button>
-              <button onClick={() => { scrollTo('professionals'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.professionals')}</button>
-              <button onClick={() => { scrollTo('partners'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.partners')}</button>
-              <button onClick={() => { scrollTo('contact-form'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('navbar.contact')}</button>
+              <button onClick={() => { scrollTo('about'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">ABOUT</button>
+              <button onClick={() => { scrollTo('how-it-works'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">HOW IT WORKS</button>
+              <button onClick={() => { scrollTo('pricing'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">PRICING</button>
+              <button onClick={() => { scrollTo('courses'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">COURSES</button>
+              <button onClick={() => { scrollTo('professionals'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">PROFESSIONALS</button>
+              <button onClick={() => { scrollTo('partners'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">PARTNERS</button>
+              <button onClick={() => { scrollTo('contact-form'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">CONTACT</button>
               <div className="h-px bg-white/10 my-2"></div>
               <button 
                 onClick={() => { window.dispatchEvent(new CustomEvent('openNotifyMe')); setIsMobileMenuOpen(false); }}
                 className="text-left text-[#FFB800] py-2"
               >
-                {t('navbar.notifyMe')}
+                NOTIFY ME
               </button>
               <button 
                 onClick={() => { scrollTo('contact-form'); setIsMobileMenuOpen(false); }}
                 className="bg-[#FFB800] text-black text-center py-3 rounded-md mt-2"
               >
-                {t('navbar.getStarted')}
+                GET STARTED
               </button>
             </div>
           </motion.div>

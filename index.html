@@ -21,8 +21,100 @@
     <meta property="twitter:title" content="Real Builder | Builders Academy - Construction School" />
     <meta property="twitter:description" content="Professional construction courses in Tavira and Lisboa. Master Tiles, Plastering, Drywall, and more at Real Builder Academy." />
     <meta property="twitter:image" content="https://lh3.googleusercontent.com/d/1JcDlCqhCcECmb6aCnMHr_G_Qj-FeGBHn" />
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Real Builder Academy",
+      "alternateName": ["Builders Academy", "Real Builder"],
+      "url": "https://realbuilder-academy.com/",
+      "logo": "https://lh3.googleusercontent.com/d/1JcDlCqhCcECmb6aCnMHr_G_Qj-FeGBHn",
+      "description": "Professional Construction Academy offering specialized courses in Tiles, Plastering, Drywall, and more.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Tavira",
+          "addressCountry": "PT"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Lisboa",
+          "addressCountry": "PT"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Construction Courses",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "Tiles & Tiling",
+            "description": "Surface preparation, precision cutting, and grouting mastery."
+          },
+          {
+            "@type": "Course",
+            "name": "Plastering / Microcement",
+            "description": "Smooth surface finishing and micro cement application."
+          },
+          {
+            "@type": "Course",
+            "name": "Drywall (Pladur)",
+            "description": "Professional partition wall and ceiling system installation."
+          }
+        ]
+      }
+    }
+    </script>
+
+    <script>
+      // Prevent React crashes from Google Translate modifying the DOM
+      if (typeof Node === 'function' && Node.prototype) {
+        const originalRemoveChild = Node.prototype.removeChild;
+        Node.prototype.removeChild = function(child) {
+          if (child.parentNode !== this) {
+            if (console) console.warn('Google Translate DOM mutation prevented crash (removeChild)');
+            return child;
+          }
+          return originalRemoveChild.apply(this, arguments);
+        };
+        
+        const originalInsertBefore = Node.prototype.insertBefore;
+        Node.prototype.insertBefore = function(newNode, referenceNode) {
+          if (referenceNode && referenceNode.parentNode !== this) {
+            if (console) console.warn('Google Translate DOM mutation prevented crash (insertBefore)');
+            return newNode;
+          }
+          return originalInsertBefore.apply(this, arguments);
+        };
+
+        const originalReplaceChild = Node.prototype.replaceChild;
+        Node.prototype.replaceChild = function(newChild, oldChild) {
+          if (oldChild && oldChild.parentNode !== this) {
+            if (console) console.warn('Google Translate DOM mutation prevented crash (replaceChild)');
+            return oldChild;
+          }
+          return originalReplaceChild.apply(this, arguments);
+        };
+      }
+    </script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            includedLanguages: 'en,pt,hi',
+            autoDisplay: false
+          },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </head>
   <body>
+    <div id="google_translate_element" style="display:none;"></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -1,12 +1,101 @@
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+
+const courses = [
+  { 
+    name: 'Tiles & Tiling',
+    mastery: [
+      'Surface preparation mastery',
+      'Precision cutting & layout planning',
+      'Grouting & sealing techniques',
+      'Pattern design & installation',
+      'Waterproofing for wet areas'
+    ]
+  },
+  { 
+    name: 'Plastering / Microcement',
+    mastery: [
+      'Smooth surface finishing',
+      'Decorative texture creation',
+      'Micro cement application',
+      'Crack repair & restoration',
+      'Color mixing & matching'
+    ]
+  },
+  { 
+    name: 'Professional Cleaning',
+    mastery: [
+      'Post-construction cleaning protocols',
+      'Industrial cleaning equipment',
+      'Surface-specific treatments',
+      'Safety & chemical handling',
+      'Quality inspection standards'
+    ]
+  },
+  { 
+    name: 'Construction Assistant',
+    mastery: [
+      'Site organization & safety',
+      'Tool maintenance & handling',
+      'Material preparation & mixing',
+      'Basic structural support',
+      'Waste management & efficiency'
+    ]
+  },
+  { 
+    name: 'Masonry / Plastering',
+    mastery: [
+      'Brick & block laying techniques',
+      'Mortar mixing & application',
+      'Structural wall construction',
+      'Exterior rendering & finishing',
+      'Leveling & alignment precision'
+    ]
+  },
+  { 
+    name: 'Drywall (Pladur)',
+    mastery: [
+      'Professional partition wall installation',
+      'Ceiling system techniques',
+      'Fire-resistant & soundproof solutions',
+      'Proper joint finishing & taping',
+      'Industry-standard safety practices'
+    ]
+  },
+  { 
+    name: 'Framing',
+    mastery: [
+      'Timber & metal stud framing',
+      'Structural load calculations',
+      'Door & window opening headers',
+      'Roof truss installation',
+      'Wall squaring & bracing'
+    ]
+  },
+  { 
+    name: 'Steel Work',
+    mastery: [
+      'Steel cutting & welding techniques',
+      'Structural steel assembly',
+      'Metal framework construction',
+      'Safety equipment & protocols',
+      'Blueprint reading for steel structures'
+    ]
+  },
+  { 
+    name: 'Stock Management / Logistics',
+    mastery: [
+      'Inventory control systems',
+      'Supply chain coordination',
+      'Material handling & storage',
+      'Delivery scheduling & tracking',
+      'Procurement & vendor relations'
+    ]
+  },
+];
 
 export default function Courses() {
-  const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const courses = t('courses.list', { returnObjects: true }) as Array<{ name: string, mastery: string[] }>;
 
   // Triplicate courses for seamless infinite scrolling
   const infiniteCourses = [...courses, ...courses, ...courses];
@@ -49,7 +138,7 @@ export default function Courses() {
 
     container.addEventListener('scroll', handleScroll);
     return () => container.removeEventListener('scroll', handleScroll);
-  }, [courses.length]);
+  }, []);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -58,6 +147,7 @@ export default function Courses() {
       if (!firstItem) return;
       
       // Calculate exact scroll amount based on item width + gap
+      // We can get the gap by subtracting the first item's offsetLeft from the second item's offsetLeft
       const secondItem = container.children[1] as HTMLElement;
       const scrollAmount = secondItem ? secondItem.offsetLeft - firstItem.offsetLeft : firstItem.offsetWidth + 16;
       
@@ -77,10 +167,10 @@ export default function Courses() {
       <div className="max-w-6xl mx-auto px-6 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight uppercase">
-            {t('courses.title')}
+            COURSES
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            {t('courses.subtitle')}
+            Master specialized skills in high-demand construction trades. All courses include theory, practice, and certification.
           </p>
         </div>
 
@@ -118,13 +208,13 @@ export default function Courses() {
 
                 {/* Normal Content */}
                 <div className="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
-                  <div className="text-[#FFB800] text-[10px] font-bold tracking-widest uppercase mb-3">{t('courses.certification')}</div>
+                  <div className="text-[#FFB800] text-[10px] font-bold tracking-widest uppercase mb-3">Certification</div>
                   <h3 className="text-white font-bold text-xl leading-tight w-4/5 group-hover:text-[#FFB800] transition-colors">{course.name}</h3>
                 </div>
 
                 {/* Hover Content (Mastery) */}
                 <div className="absolute inset-0 z-20 p-6 bg-[#1a1d21] flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="text-[#FFB800] text-[10px] font-bold tracking-widest uppercase mb-3">{t('courses.masteryTitle')}</div>
+                  <div className="text-[#FFB800] text-[10px] font-bold tracking-widest uppercase mb-3">What you'll master:</div>
                   <ul className="space-y-2">
                     {course.mastery.map((item, i) => (
                       <li key={i} className="text-white text-xs flex items-start gap-2">
@@ -136,7 +226,7 @@ export default function Courses() {
                 </div>
 
                 <div className="relative z-10 flex items-center gap-2 text-gray-500 text-sm font-semibold group-hover:text-white transition-colors mt-4 uppercase">
-                  {t('courses.notifyMe')} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  Notify Me <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             ))}

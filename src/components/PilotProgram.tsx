@@ -1,20 +1,18 @@
 import { CheckCircle2, AlertTriangle, Send, ChevronDown } from 'lucide-react';
 import React, { useState } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
 import BrandName from './BrandName';
 
+const areasOfInterest = [
+  { id: 'tiler', name: 'Tiler' },
+  { id: 'carpenter', name: 'Carpenter' },
+  { id: 'drywall', name: 'Drywall Installer' },
+  { id: 'plaster', name: 'Plaster/Microcement Specialist' },
+];
+
 export default function PilotProgram() {
-  const { t } = useTranslation();
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [experience, setExperience] = useState('');
-
-  const areasOfInterest = [
-    { id: 'tiler', name: t('pilot.form.areas.items.tiler') },
-    { id: 'carpenter', name: t('pilot.form.areas.items.carpenter') },
-    { id: 'drywall', name: t('pilot.form.areas.items.drywall') },
-    { id: 'plaster', name: t('pilot.form.areas.items.plaster') },
-  ];
 
   const handleAreaToggle = (areaId: string) => {
     setSelectedAreas(prev => {
@@ -50,7 +48,7 @@ export default function PilotProgram() {
       }, 4000);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(t('pilot.form.error'));
+      alert('There was an error submitting the form. Please try again.');
     }
   };
 
@@ -66,36 +64,37 @@ export default function PilotProgram() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/10 border border-black/20 text-black text-xs font-black tracking-widest uppercase mb-6">
               <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-              {t('pilot.badge')}
+              Limited Opportunity
             </div>
             
             <h2 className="text-4xl md:text-6xl font-black text-black mb-6 tracking-tight uppercase leading-none">
-              <Trans i18nKey="pilot.title" components={{ brand: <BrandName />, br: <br />, span: <span className="text-white drop-shadow-md" /> }} />
+              Join the <BrandName /> <br />
+              <span className="text-white drop-shadow-md">Pilot Program! 3 spots only!</span>
             </h2>
             
             <p className="text-black/80 text-xl font-bold mb-8 max-w-lg">
-              {t('pilot.subtitle')}
+              Get free training and a job contract!
             </p>
 
             <ul className="space-y-4 mb-10">
               <li className="flex items-start gap-3 text-black font-semibold text-lg">
                 <CheckCircle2 className="text-black shrink-0 mt-0.5" />
-                <Trans i18nKey="pilot.benefits.item1" components={{ brand: <BrandName /> }} />
+                Become the first Certified <BrandName />
               </li>
               <li className="flex items-start gap-3 text-black font-semibold text-lg">
                 <CheckCircle2 className="text-black shrink-0 mt-0.5" />
-                {t('pilot.benefits.item2')}
+                Be a part of the next generation of construction professionals
               </li>
               <li className="flex items-start gap-3 text-black font-semibold text-lg">
                 <CheckCircle2 className="text-black shrink-0 mt-0.5" />
-                {t('pilot.benefits.item3')}
+                Earn from 1200€ to 2000€/monthly
               </li>
             </ul>
 
             <div className="bg-black/10 border-l-4 border-black p-4 rounded-r-xl inline-flex items-start gap-3">
               <AlertTriangle className="text-black shrink-0" />
               <p className="text-black font-bold text-sm">
-                {t('pilot.warning')}
+                Important: The program is intensive (10 hours/day). We are looking for dedicated professionals ready to commit.
               </p>
             </div>
           </div>
@@ -105,38 +104,38 @@ export default function PilotProgram() {
             {!isSubmitted ? (
               <>
                 <h3 className="text-2xl font-black text-white mb-6 tracking-tight uppercase">
-                  {t('pilot.form.title')}
+                  Apply Now
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">{t('pilot.form.fields.firstName.label')}</label>
-                      <input type="text" name="firstName" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder={t('pilot.form.fields.firstName.placeholder')} />
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">First Name</label>
+                      <input type="text" name="firstName" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder="John" />
                     </div>
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">{t('pilot.form.fields.lastName.label')}</label>
-                      <input type="text" name="lastName" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder={t('pilot.form.fields.lastName.placeholder')} />
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">Last Name</label>
+                      <input type="text" name="lastName" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder="Doe" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">{t('pilot.form.fields.phone.label')}</label>
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">Phone Number</label>
                       <input type="tel" name="phone" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder="+351 900 000 000" />
                     </div>
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">{t('pilot.form.fields.email.label')}</label>
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">Email</label>
                       <input type="email" name="email" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder="john@example.com" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">{t('pilot.form.fields.city.label')}</label>
-                      <input type="text" name="city" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder={t('pilot.form.fields.city.placeholder')} />
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">City</label>
+                      <input type="text" name="city" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm" placeholder="Lisbon" />
                     </div>
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">{t('pilot.form.fields.experience.label')}</label>
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-1">Years of Experience</label>
                       <div className="relative">
                         <select 
                           name="experience" 
@@ -145,17 +144,17 @@ export default function PilotProgram() {
                           onChange={(e) => setExperience(e.target.value)}
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#FFB800] transition-colors text-sm appearance-none"
                         >
-                          <option value="" disabled className="bg-[#15181b] text-gray-400">{t('pilot.form.fields.experience.placeholder')}</option>
-                          <option value="Less than 1 year" className="bg-[#15181b] text-white">{t('pilot.form.fields.experience.options.lessThan1')}</option>
-                          <option value="1-3 years" className="bg-[#15181b] text-white">{t('pilot.form.fields.experience.options.1to3')}</option>
-                          <option value="3-5 years" className="bg-[#15181b] text-white">{t('pilot.form.fields.experience.options.3to5')}</option>
-                          <option value="5+ years" className="bg-[#15181b] text-white">{t('pilot.form.fields.experience.options.moreThan5')}</option>
+                          <option value="" disabled className="bg-[#15181b] text-gray-400">Select experience...</option>
+                          <option value="Less than 1 year" className="bg-[#15181b] text-white">Less than 1 year</option>
+                          <option value="1-3 years" className="bg-[#15181b] text-white">1-3 years</option>
+                          <option value="3-5 years" className="bg-[#15181b] text-white">3-5 years</option>
+                          <option value="5+ years" className="bg-[#15181b] text-white">5+ years</option>
                         </select>
                         <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                       </div>
                       {experience === 'Less than 1 year' && (
                         <p className="text-red-500 text-xs mt-2 font-bold">
-                          {t('pilot.form.fields.experience.error')}
+                          I'm missing some requirements and need assistance
                         </p>
                       )}
                     </div>
@@ -163,24 +162,24 @@ export default function PilotProgram() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">{t('pilot.form.fields.tavira.label')}</label>
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">Available to work in Tavira?</label>
                       <div className="flex gap-4">
                         <label className="flex items-center gap-2 text-white text-sm cursor-pointer">
-                          <input type="radio" name="tavira" value="yes" required className="accent-[#FFB800]" /> {t('pilot.form.fields.tavira.yes')}
+                          <input type="radio" name="tavira" value="yes" required className="accent-[#FFB800]" /> Yes
                         </label>
                         <label className="flex items-center gap-2 text-white text-sm cursor-pointer">
-                          <input type="radio" name="tavira" value="no" required className="accent-[#FFB800]" /> {t('pilot.form.fields.tavira.no')}
+                          <input type="radio" name="tavira" value="no" required className="accent-[#FFB800]" /> No
                         </label>
                       </div>
                     </div>
                     <div>
-                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">{t('pilot.form.fields.immediate.label')}</label>
+                      <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">Available to start immediately?</label>
                       <div className="flex gap-4">
                         <label className="flex items-center gap-2 text-white text-sm cursor-pointer">
-                          <input type="radio" name="immediate" value="yes" required className="accent-[#FFB800]" /> {t('pilot.form.fields.immediate.yes')}
+                          <input type="radio" name="immediate" value="yes" required className="accent-[#FFB800]" /> Yes
                         </label>
                         <label className="flex items-center gap-2 text-white text-sm cursor-pointer">
-                          <input type="radio" name="immediate" value="no" required className="accent-[#FFB800]" /> {t('pilot.form.fields.immediate.no')}
+                          <input type="radio" name="immediate" value="no" required className="accent-[#FFB800]" /> No
                         </label>
                       </div>
                     </div>
@@ -188,7 +187,7 @@ export default function PilotProgram() {
 
                   <div>
                     <label className="block text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">
-                      {t('pilot.form.areas.label')}
+                      Areas of Interest (Select up to 2)
                     </label>
                     <div className="flex flex-wrap gap-2">
                       {areasOfInterest.map(area => {
@@ -225,7 +224,7 @@ export default function PilotProgram() {
                         : 'bg-[#FFB800] text-black hover:bg-white'
                     }`}
                   >
-                    {t('pilot.form.submit')} <Send size={18} />
+                    SUBMIT APPLICATION <Send size={18} />
                   </button>
                 </form>
               </>
@@ -235,10 +234,10 @@ export default function PilotProgram() {
                   <CheckCircle2 className="text-green-500" size={40} />
                 </div>
                 <h3 className="text-2xl font-black text-white mb-4 tracking-tight uppercase">
-                  {t('pilot.form.success.title')}
+                  Application Received!
                 </h3>
                 <p className="text-gray-400">
-                  <Trans i18nKey="pilot.form.success.message" components={{ brand: <BrandName /> }} />
+                  Thank you for applying to the <BrandName /> Pilot Program. We will review your application and contact you soon.
                 </p>
               </div>
             )}
