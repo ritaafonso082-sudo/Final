@@ -66,25 +66,26 @@ export default function NotifyMeModal({ isOpen, onClose }: NotifyMeModalProps) {
 
   return (
     <div 
-      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto transition-all duration-300 ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all duration-300 ${
         isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
       <div
-        className={`relative w-full max-w-lg bg-[#15181b] border border-white/10 rounded-2xl shadow-2xl p-6 md:p-8 my-8 transition-all duration-300 ${
+        className={`relative w-full max-w-lg bg-[#15181b] border border-white/10 rounded-2xl shadow-2xl max-h-[90vh] flex flex-col overflow-hidden transition-all duration-300 ${
           isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'
         }`}
       >
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10 bg-[#1a1d21] p-2 rounded-full"
+          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-20 bg-[#1a1d21] p-2 rounded-full"
         >
           <X size={20} />
         </button>
         
-        {!isSubmitted ? (
-              <>
-                <div className="text-center mb-8">
+        <div className="p-6 md:p-8 overflow-y-auto flex-1 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+          {!isSubmitted ? (
+                <>
+                  <div className="text-center mb-8">
                   <motion.div 
                     animate={{ rotate: [-15, 15, -15] }}
                     transition={{ duration: 0.6, repeat: Infinity, ease: "easeInOut" }}
@@ -92,8 +93,9 @@ export default function NotifyMeModal({ isOpen, onClose }: NotifyMeModalProps) {
                   >
                     <Bell className="text-[#FFB800]" size={32} />
                   </motion.div>
-                  <h3 className="text-2xl font-black text-white mb-2 tracking-tight uppercase">
-                    Get Notified
+                  <h3 className="text-2xl font-black text-white mb-2 tracking-tight uppercase notranslate" translate="no">
+                    <span className="lang-en">Get Notified</span>
+                    <span className="lang-pt">Seja notificado</span>
                   </h3>
                   <p className="text-gray-400 text-sm">
                     Leave your details below and we'll notify you as soon as new courses open.
@@ -255,5 +257,6 @@ export default function NotifyMeModal({ isOpen, onClose }: NotifyMeModalProps) {
             )}
           </div>
         </div>
+      </div>
   );
 }

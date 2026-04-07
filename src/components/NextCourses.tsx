@@ -220,7 +220,7 @@ export default function NextCourses() {
               <div className="flex items-center gap-3">
                 <div>
                   <h3 className="text-xl font-semibold text-white tracking-tight">Full Course Calendar</h3>
-                  <p className="text-gray-500 text-sm mt-1">Upcoming dates for all <BrandName /> certifications</p>
+                  <p className="text-gray-500 text-sm mt-1">Upcoming dates for all{' '}<BrandName />{' '}certifications</p>
                 </div>
               </div>
               <button 

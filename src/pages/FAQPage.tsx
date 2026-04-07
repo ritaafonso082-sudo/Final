@@ -14,7 +14,7 @@ const faqs: FAQ[] = [
     question: "What is Real Builder?",
     answer: (
       <>
-        <BrandName /> is a premier construction academy in Portugal dedicated to transforming individuals with basic or no experience into certified, job-ready construction professionals. We focus on intensive, hands-on training to meet the high demand of the modern construction industry.
+        <BrandName />{' '}is a premier construction academy in Portugal dedicated to transforming individuals with basic or no experience into certified, job-ready construction professionals. We focus on intensive, hands-on training to meet the high demand of the modern construction industry.
       </>
     ),
     answerText: "Real Builder is a premier construction academy in Portugal dedicated to transforming individuals with basic or no experience into certified, job-ready construction professionals. We focus on intensive, hands-on training to meet the high demand of the modern construction industry."
@@ -33,7 +33,7 @@ const faqs: FAQ[] = [
     question: "What is the job placement rate after graduation?",
     answer: (
       <>
-        We are proud of our 93% job placement rate. Thanks to our strong partnerships with leading construction companies across Portugal, our certified <BrandName withAcademy={false} />s have direct pathways to high-paying, stable employment immediately after graduation.
+        We are proud of our 93% job placement rate. Thanks to our strong partnerships with leading construction companies across Portugal, our certified{' '}<BrandName withAcademy={false} />s have direct pathways to high-paying, stable employment immediately after graduation.
       </>
     ),
     answerText: "We are proud of our 93% job placement rate. Thanks to our strong partnerships with leading construction companies across Portugal, our certified Real Builders have direct pathways to high-paying, stable employment immediately after graduation."

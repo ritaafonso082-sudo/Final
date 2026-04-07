@@ -1,65 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState('EN');
+  const { language, setLanguage } = useLanguage();
 
   const languages = [
     { code: 'en', label: 'EN', name: 'English' },
     { code: 'pt', label: 'PT', name: 'Português' },
     { code: 'hi', label: 'HI', name: 'हिन्दी' }
-  ];
+  ] as const;
 
-  useEffect(() => {
-    // Check if there's a saved language in cookies
-    const match = document.cookie.match(/(^|;) ?googtrans=([^;]*)(;|$)/);
-    if (match) {
-      const langCode = match[2].split('/')[2];
-      if (langCode === 'pt') setCurrentLang('PT');
-      else if (langCode === 'hi') setCurrentLang('HI');
-      else setCurrentLang('EN');
-    }
-  }, []);
+  const currentLangLabel = languages.find(l => l.code === language)?.label || 'EN';
 
-  const changeLanguage = (langCode: string, label: string) => {
-    if (label === currentLang) {
-      setIsOpen(false);
-      return;
-    }
-
-    setCurrentLang(label);
+  const changeLanguage = (langCode: 'en' | 'pt' | 'hi') => {
+    setLanguage(langCode);
     setIsOpen(false);
-    
-    if (langCode === 'en') {
-      // To revert to English, clear cookies and reload
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
-      window.location.reload();
-      return;
-    }
-
-    // Trigger Google Translate dropdown for other languages
-    const triggerTranslate = () => {
-      const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-      if (select) {
-        select.value = langCode;
-        select.dispatchEvent(new Event('change'));
-        return true;
-      }
-      return false;
-    };
-
-    if (!triggerTranslate()) {
-      // Only if it fails, try a few more times with shorter intervals
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        if (triggerTranslate() || attempts > 10) {
-          clearInterval(interval);
-        }
-      }, 100);
-    }
   };
 
   return (
@@ -69,7 +26,7 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-1 text-gray-300 hover:text-white transition-colors text-xs font-semibold px-2 py-1 rounded-md"
       >
         <Globe size={16} />
-        <span className="hidden sm:inline">{currentLang}</span>
+        <span className="hidden sm:inline">{currentLangLabel}</span>
         <ChevronDown size={14} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
@@ -78,9 +35,9 @@ export default function LanguageSwitcher() {
           {languages.map((lang) => (
             <button
               key={lang.code}
-              onClick={() => changeLanguage(lang.code, lang.label)}
+              onClick={() => changeLanguage(lang.code)}
               className={`w-full text-left px-4 py-2 text-xs font-semibold hover:bg-white/5 transition-colors notranslate ${
-                currentLang === lang.label ? 'text-[#FFB800]' : 'text-gray-300'
+                language === lang.code ? 'text-[#FFB800]' : 'text-gray-300'
               }`}
               translate="no"
             >

@@ -51,7 +51,7 @@ export default function HowItWorks() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-5 gap-8 relative z-10 pt-8 pb-8 md:pt-0 md:pb-0 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0"
+            className="flex overflow-x-auto md:overflow-visible snap-x snap-mandatory md:grid md:grid-cols-5 gap-8 relative z-10 pt-8 pb-8 md:pt-0 md:pb-0 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0"
           >
             {/* Step 1 */}
             <motion.div variants={itemVariants} className="flex-none w-[85vw] sm:w-[60vw] md:w-auto snap-center flex flex-col items-center group cursor-pointer">

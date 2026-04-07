@@ -61,3 +61,8 @@ body {
 .goog-te-spinner-pos {
   display: none !important;
 }
+
+/* Language specific overrides */
+html[lang="pt"] .lang-en { display: none !important; }
+html[lang="pt"] .lang-pt { display: inline-block !important; }
+html:not([lang="pt"]) .lang-pt { display: none !important; }

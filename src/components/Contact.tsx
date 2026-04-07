@@ -56,7 +56,7 @@ export default function Contact() {
             Ready to start your <span className="text-[#FFB800]">journey?</span>
           </h2>
           <p className="text-gray-400 text-lg leading-relaxed">
-            Have questions about our courses, membership, or vehicle solutions? Our team is here to help you become a <BrandName />.
+            Have questions about our courses, membership, or vehicle solutions? Our team is here to help you become a{' '}<BrandName />.
           </p>
         </div>
 

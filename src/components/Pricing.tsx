@@ -250,9 +250,10 @@ export default function Pricing() {
                 </p>
 
                 <div className="bg-red-500/10 border border-red-500/20 rounded-lg py-3 px-4 mb-8">
-                  <span className="text-red-500 text-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2">
+                  <span className="text-red-500 text-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2 notranslate" translate="no">
                     <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                    20 get 50% off - 2 get 100% off
+                    <span className="lang-en">20 get 50% off - 2 get 100% off</span>
+                    <span className="lang-pt">20 ganham 50% de desconto - 2 ganham 100% de desconto</span>
                   </span>
                 </div>
                 

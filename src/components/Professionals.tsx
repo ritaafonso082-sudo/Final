@@ -25,8 +25,9 @@ export default function Professionals() {
     <section id="professionals" className="py-16 md:py-32 bg-[#111315] relative border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">
-            Certified Professionals <span className="text-[#FFB800]">Near You</span>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight notranslate" translate="no">
+            <span className="lang-en">Certified Professionals <span className="text-[#FFB800]">Near You</span></span>
+            <span className="lang-pt">Profissionais Certificados <span className="text-[#FFB800]">Perto de Si</span></span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Browse our network of certified <BrandName withAcademy /> across Portugal. Each professional has completed our rigorous certification program.

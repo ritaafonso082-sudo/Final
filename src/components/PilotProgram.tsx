@@ -67,9 +67,11 @@ export default function PilotProgram() {
               Limited Opportunity
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-black text-black mb-6 tracking-tight uppercase leading-none">
-              Join the <BrandName /> <br />
-              <span className="text-white drop-shadow-md">Pilot Program! 3 spots only!</span>
+            <h2 className="text-4xl md:text-6xl font-black text-black mb-6 tracking-tight uppercase leading-none notranslate" translate="no">
+              <span className="lang-en">Join the <BrandName /> <br />
+              <span className="text-white drop-shadow-md">Pilot Program! 3 spots only!</span></span>
+              <span className="lang-pt">Junte-se ao Programa Piloto <BrandName />! <br />
+              <span className="text-white drop-shadow-md">Apenas 3 vagas!</span></span>
             </h2>
             
             <p className="text-black/80 text-xl font-bold mb-8 max-w-lg">
@@ -79,15 +81,15 @@ export default function PilotProgram() {
             <ul className="space-y-4 mb-10">
               <li className="flex items-start gap-3 text-black font-semibold text-lg">
                 <CheckCircle2 className="text-black shrink-0 mt-0.5" />
-                Become the first Certified <BrandName />
+                <span>Become the first Certified <BrandName /></span>
               </li>
               <li className="flex items-start gap-3 text-black font-semibold text-lg">
                 <CheckCircle2 className="text-black shrink-0 mt-0.5" />
-                Be a part of the next generation of construction professionals
+                <span>Be a part of the next generation of construction professionals</span>
               </li>
               <li className="flex items-start gap-3 text-black font-semibold text-lg">
                 <CheckCircle2 className="text-black shrink-0 mt-0.5" />
-                Earn from 1200€ to 2000€/monthly
+                <span>Earn from 1200€ to 2000€/monthly</span>
               </li>
             </ul>
 

@@ -17,14 +17,14 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">1. Introduction</h2>
             <p>
-              <BrandName withAcademy /> respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, share, and protect your personal information when you visit our website or use our services, in compliance with the General Data Protection Regulation (GDPR - Regulation (EU) 2016/679).
+              <BrandName withAcademy />{' '}respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, share, and protect your personal information when you visit our website or use our services, in compliance with the General Data Protection Regulation (GDPR - Regulation (EU) 2016/679).
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">2. Data Controller</h2>
             <p>
-              The entity responsible for processing your personal data is <BrandName withAcademy />, headquartered at Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal.
+              The entity responsible for processing your personal data is{' '}<BrandName withAcademy />, headquartered at Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal.
             </p>
           </section>
 

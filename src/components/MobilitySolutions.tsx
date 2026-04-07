@@ -1,6 +1,9 @@
 import { Key, Zap, Car, Truck } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function MobilitySolutions() {
+  const { t } = useTranslation();
+
   const handleSelectVehicle = (vehicleId: string) => {
     window.dispatchEvent(new CustomEvent('planSelected', { detail: 'course_vehicle' }));
     window.dispatchEvent(new CustomEvent('vehicleSelected', { detail: vehicleId }));
@@ -24,7 +27,7 @@ export default function MobilitySolutions() {
 
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-              Choose Your <span className="text-[#FFB800]">Mobility Solution</span>
+              {t('mobility.title.part1')} <span className="text-[#FFB800]">{t('mobility.title.part2')}</span>
             </h2>
           </div>
 
@@ -37,7 +40,7 @@ export default function MobilitySolutions() {
               <div className="h-48 bg-white relative w-full">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1n1hlKM4AOQ9g73HteeUgPm0a6KE-W1X7" 
-                  alt="Mobile Toolbox" 
+                  alt={t('mobility.vehicles.toolbox.name')}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -47,14 +50,14 @@ export default function MobilitySolutions() {
                   <div className="w-5 h-5 rounded-full bg-[#FFB800] flex items-center justify-center text-black">
                     <Key size={12} />
                   </div>
-                  Mobile Toolbox
+                  {t('mobility.vehicles.toolbox.name')}
                 </div>
                 <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-6">
-                  RB STARTER
+                  {t('mobility.vehicles.toolbox.desc')}
                 </div>
                 <div className="mt-auto flex items-baseline gap-1">
                   <span className="text-[#FFB800] text-3xl font-bold">€249</span>
-                  <span className="text-gray-500 text-xs">/ month</span>
+                  <span className="text-gray-500 text-xs">/ {t('mobility.month')}</span>
                 </div>
               </div>
             </button>
@@ -67,7 +70,7 @@ export default function MobilitySolutions() {
               <div className="h-48 bg-gray-300 relative w-full">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1xVu-eCm-bBAUQMkCPX77Hk40JcpMqs9N" 
-                  alt="Electric 3-Wheeler" 
+                  alt={t('mobility.vehicles.wheeler.name')}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -77,14 +80,14 @@ export default function MobilitySolutions() {
                   <div className="w-5 h-5 rounded-full bg-[#FFB800] flex items-center justify-center text-black">
                     <Zap size={12} />
                   </div>
-                  Electric 3-Wheeler
+                  {t('mobility.vehicles.wheeler.name')}
                 </div>
                 <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-6">
-                  1-2 MAN BUSINESS IN TOWN
+                  {t('mobility.vehicles.wheeler.desc')}
                 </div>
                 <div className="mt-auto flex items-baseline gap-1">
                   <span className="text-[#FFB800] text-3xl font-bold">€389</span>
-                  <span className="text-gray-500 text-xs">/ month</span>
+                  <span className="text-gray-500 text-xs">/ {t('mobility.month')}</span>
                 </div>
               </div>
             </button>
@@ -95,12 +98,12 @@ export default function MobilitySolutions() {
               className="bg-[#1a1d21] rounded-2xl overflow-hidden border border-[#FFB800]/30 flex flex-col relative transform lg:-translate-y-2 shadow-[0_0_30px_rgba(255,184,0,0.1)] hover:border-[#FFB800] transition-colors text-left w-full cursor-pointer"
             >
               <div className="absolute top-0 left-0 right-0 bg-[#FFB800] text-black text-[10px] font-bold text-center py-1 z-10 tracking-widest uppercase">
-                MOST POPULAR
+                {t('mobility.popular')}
               </div>
               <div className="h-48 bg-gray-400 relative mt-6 w-full">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1-rzX3X8Lf-3bFpC1auxN_RREX_4ldFwa" 
-                  alt="Tool Buggy / Quad" 
+                  alt={t('mobility.vehicles.buggy.name')}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -110,14 +113,14 @@ export default function MobilitySolutions() {
                   <div className="w-5 h-5 rounded-full bg-[#FFB800] flex items-center justify-center text-black">
                     <Car size={12} />
                   </div>
-                  Tool Buggy / Quad
+                  {t('mobility.vehicles.buggy.name')}
                 </div>
                 <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-6">
-                  1-4 MAN BUSINESS IN TOWN
+                  {t('mobility.vehicles.buggy.desc')}
                 </div>
                 <div className="mt-auto flex items-baseline gap-1">
                   <span className="text-[#FFB800] text-3xl font-bold">€489</span>
-                  <span className="text-gray-500 text-xs">/ month</span>
+                  <span className="text-gray-500 text-xs">/ {t('mobility.month')}</span>
                 </div>
               </div>
             </button>
@@ -130,7 +133,7 @@ export default function MobilitySolutions() {
               <div className="h-48 bg-gray-500 relative w-full">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1iefT26tARQu5H7tEhmmHCtvf8b8RAlsN" 
-                  alt="Tool Van" 
+                  alt={t('mobility.vehicles.van.name')}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -140,14 +143,14 @@ export default function MobilitySolutions() {
                   <div className="w-5 h-5 rounded-full bg-[#FFB800] flex items-center justify-center text-black">
                     <Truck size={12} />
                   </div>
-                  Tool Van
+                  {t('mobility.vehicles.van.name')}
                 </div>
                 <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-6">
-                  1-4 MAN BUSINESS MULTI...
+                  {t('mobility.vehicles.van.desc')}
                 </div>
                 <div className="mt-auto flex items-baseline gap-1">
                   <span className="text-[#FFB800] text-3xl font-bold">€589</span>
-                  <span className="text-gray-500 text-xs">/ month</span>
+                  <span className="text-gray-500 text-xs">/ {t('mobility.month')}</span>
                 </div>
               </div>
             </button>

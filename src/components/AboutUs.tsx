@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import BrandName from './BrandName';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Counter = ({ from, to, duration = 2, suffix = '' }: { from: number, to: number, duration?: number, suffix?: string }) => {
   const [count, setCount] = useState(from);
@@ -35,6 +36,8 @@ const Counter = ({ from, to, duration = 2, suffix = '' }: { from: number, to: nu
 };
 
 export default function AboutUs() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-32 bg-[#0a0a0a] relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
@@ -47,40 +50,40 @@ export default function AboutUs() {
             className="text-gray-400 text-base leading-relaxed space-y-4"
           >
             <h2 className="text-2xl font-black text-white tracking-tight uppercase mb-6">
-              ABOUT <BrandName />
+              {t('about.title')} <BrandName />
             </h2>
             <p className="text-white font-bold">
-              To become a <BrandName /> is more than a profession.
+              {t('about.p1')} <BrandName /> {t('about.p1_2')}
             </p>
             <p className="text-[#FFB800] italic font-semibold">
-              It is a mindset. A statement. A way of life.
+              {t('about.p2')}
             </p>
             <p>
-              <BrandName /> is about taking your career, your income, and your personal standards to the next level.
+              <BrandName /> {t('about.p3')}
             </p>
             <p className="text-white font-bold">
-              To earn more, you must become more.
+              {t('about.p4')}
             </p>
             <p>
-              This is your opportunity to unlock your real potential — starting tomorrow — and build a stronger future.
+              {t('about.p5')}
             </p>
             <p className="text-white font-bold">
-              By joining <BrandName />, you become part of something that has never existed before:
+              {t('about.p6')} <BrandName />{t('about.p6_2')}
             </p>
             <p className="text-[#FFB800] font-bold">
-              A new generation of construction professionals.
+              {t('about.p7')}
             </p>
             <p className="italic">
-              Intelligent. Business-minded. Physically strong. Mentally sharp.
+              {t('about.p8')}
             </p>
             <p className="text-white font-bold">
-              You are not just a worker.
+              {t('about.p9')}
             </p>
             <div className="flex flex-col gap-1">
               <p className="text-[#FFB800] font-black text-xl uppercase">
-                YOU ARE A <BrandName />.
+                {t('about.p10')} <BrandName />.
               </p>
-              <p><BrandName /> is a new standard of personality.</p>
+              <p><BrandName /> {t('about.p11')}</p>
             </div>
           </motion.div>
 
@@ -95,28 +98,28 @@ export default function AboutUs() {
               <div className="text-3xl sm:text-5xl font-black text-white mb-1 sm:mb-2 group-hover:text-[#FFB800] transition-colors duration-300">
                 <Counter from={0} to={20} suffix="+" />
               </div>
-              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">COURSES</div>
+              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">{t('about.courses')}</div>
             </div>
             
             <div className="bg-[#111315] border border-white/5 rounded-2xl p-4 sm:p-8 flex flex-col items-center justify-center text-center group hover:border-[#FFB800]/30 transition-colors duration-300 sm:translate-y-8">
               <div className="text-3xl sm:text-5xl font-black text-white mb-1 sm:mb-2 group-hover:text-[#FFB800] transition-colors duration-300">
                 <Counter from={0} to={300} suffix="+" />
               </div>
-              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">GRADUATES</div>
+              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">{t('about.graduates')}</div>
             </div>
             
             <div className="bg-[#111315] border border-white/5 rounded-2xl p-4 sm:p-8 flex flex-col items-center justify-center text-center group hover:border-[#FFB800]/30 transition-colors duration-300">
               <div className="text-3xl sm:text-5xl font-black text-white mb-1 sm:mb-2 group-hover:text-[#FFB800] transition-colors duration-300">
                 <Counter from={0} to={93} suffix="%" />
               </div>
-              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">JOB RATE</div>
+              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">{t('about.jobRate')}</div>
             </div>
 
             <div className="bg-[#111315] border border-white/5 rounded-2xl p-4 sm:p-8 flex flex-col items-center justify-center text-center group hover:border-[#FFB800]/30 transition-colors duration-300 sm:translate-y-8">
               <div className="text-3xl sm:text-5xl font-black text-white mb-1 sm:mb-2 group-hover:text-[#FFB800] transition-colors duration-300">
                 <Counter from={0} to={15} suffix="+" />
               </div>
-              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">PARTNERS</div>
+              <div className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase">{t('about.partners')}</div>
             </div>
           </motion.div>
         </div>

@@ -17,7 +17,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">1. Introduction</h2>
             <p>
-              Welcome to <BrandName withAcademy />. These Terms and Conditions govern the access and use of our website and the services provided by <BrandName withAcademy />, headquartered at Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal.
+              Welcome to{' '}<BrandName withAcademy />. These Terms and Conditions govern the access and use of our website and the services provided by{' '}<BrandName withAcademy />, headquartered at Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal.
             </p>
             <p>
               By accessing and using this website, the user agrees to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">2. Services</h2>
             <p>
-              <BrandName withAcademy /> offers professional training courses in the construction industry, including, but not limited to, drywall installation, tiling, and underfloor heating installation.
+              <BrandName withAcademy />{' '}offers professional training courses in the construction industry, including, but not limited to, drywall installation, tiling, and underfloor heating installation.
             </p>
             <p>
               Enrollment in courses is subject to availability, meeting admission requirements, and payment of the respective tuition fees, where applicable.
@@ -47,7 +47,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">4. Intellectual Property</h2>
             <p>
-              All content present on this website, including texts, graphics, logos, icons, images, audio clips, digital downloads, and data compilations, is the property of <BrandName withAcademy /> or its content suppliers and is protected by Portuguese and international copyright laws.
+              All content present on this website, including texts, graphics, logos, icons, images, audio clips, digital downloads, and data compilations, is the property of{' '}<BrandName withAcademy />{' '}or its content suppliers and is protected by Portuguese and international copyright laws.
             </p>
             <p>
               The reproduction, duplication, copying, selling, reselling, or exploitation of any part of the website for commercial purposes without our express written consent is not permitted.
@@ -64,10 +64,10 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">6. Limitation of Liability</h2>
             <p>
-              <BrandName withAcademy /> makes every effort to ensure that the information presented on the website is accurate and up-to-date. However, we do not guarantee the absence of errors or omissions.
+              <BrandName withAcademy />{' '}makes every effort to ensure that the information presented on the website is accurate and up-to-date. However, we do not guarantee the absence of errors or omissions.
             </p>
             <p>
-              <BrandName withAcademy /> shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this website or the services offered.
+              <BrandName withAcademy />{' '}shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this website or the services offered.
             </p>
           </section>
 

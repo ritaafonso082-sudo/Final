@@ -54,10 +54,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-start text-xs gap-2 md:gap-4">
-          <p>© {new Date().getFullYear()} <BrandName withAcademy />. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}{' '}<BrandName withAcademy />. All rights reserved.</p>
           <span className="hidden md:inline text-gray-700">•</span>
           <p>
-            Website developed by <a href="https://agencia-vela.com" target="_blank" rel="noopener noreferrer" className="text-[#FFB800] hover:underline">Agência Vela</a>
+            Website developed by{' '}<a href="https://agencia-vela.com" target="_blank" rel="noopener noreferrer" className="text-[#FFB800] hover:underline">Agência Vela</a>
           </p>
         </div>
       </div>

@@ -12,6 +12,7 @@ import FAQPage from './pages/FAQPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import NotifyMeModal from './components/NotifyMeModal';
+import { LanguageProvider } from './i18n/LanguageContext';
 
 export default function App() {
   const [isNotifyMeOpen, setIsNotifyMeOpen] = useState(false);
@@ -23,22 +24,24 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-[#FFB800] selection:text-black overflow-x-hidden">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-        </Routes>
-        <Footer />
-        
-        <NotifyMeModal 
-          isOpen={isNotifyMeOpen} 
-          onClose={() => setIsNotifyMeOpen(false)} 
-        />
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-[#FFB800] selection:text-black overflow-x-hidden">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+          </Routes>
+          <Footer />
+          
+          <NotifyMeModal 
+            isOpen={isNotifyMeOpen} 
+            onClose={() => setIsNotifyMeOpen(false)} 
+          />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }

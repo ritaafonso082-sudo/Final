@@ -4,11 +4,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import LanguageSwitcher from './LanguageSwitcher';
 import BrandName from './BrandName';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const scrollTo = (id: string) => {
     if (location.pathname !== '/') {
@@ -36,14 +38,14 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wider text-gray-300">
-          <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">ABOUT</button>
-          <button onClick={() => scrollTo('how-it-works')} className="hover:text-white transition-colors">HOW IT WORKS</button>
-          <button onClick={() => scrollTo('pricing')} className="hover:text-white transition-colors">PRICING</button>
-          <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">COURSES</button>
-          <button onClick={() => scrollTo('professionals')} className="hover:text-white transition-colors">PROFESSIONALS</button>
+        <div className="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wider text-gray-300 uppercase">
+          <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">{t('nav.about')}</button>
+          <button onClick={() => scrollTo('how-it-works')} className="hover:text-white transition-colors">{t('nav.howItWorks')}</button>
+          <button onClick={() => scrollTo('pricing')} className="hover:text-white transition-colors">{t('nav.pricing')}</button>
+          <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">{t('nav.courses')}</button>
+          <button onClick={() => scrollTo('professionals')} className="hover:text-white transition-colors">{t('nav.professionals')}</button>
           <button onClick={() => scrollTo('partners')} className="hover:text-white transition-colors">PARTNERS</button>
-          <button onClick={() => scrollTo('contact-form')} className="hover:text-white transition-colors">CONTACT</button>
+          <button onClick={() => scrollTo('contact-form')} className="hover:text-white transition-colors">{t('nav.contact')}</button>
         </div>
 
         <div className="flex items-center gap-4 md:gap-6">
@@ -51,9 +53,9 @@ export default function Navbar() {
           
           <button 
             onClick={() => window.dispatchEvent(new CustomEvent('openNotifyMe'))}
-            className="hidden md:block text-white px-2 py-2 rounded-md text-xs font-bold tracking-wider hover:text-[#FFB800] transition-colors"
+            className="hidden md:block text-white px-2 py-2 rounded-md text-xs font-bold tracking-wider hover:text-[#FFB800] transition-colors uppercase"
           >
-            NOTIFY ME
+            {t('hero.notifyMe')}
           </button>
           
           <motion.button 
@@ -96,20 +98,20 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-[#0a0a0a] border-b border-white/10 overflow-hidden"
           >
-            <div className="flex flex-col px-6 py-4 gap-4 text-sm font-semibold tracking-wider text-gray-300">
-              <button onClick={() => { scrollTo('about'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">ABOUT</button>
-              <button onClick={() => { scrollTo('how-it-works'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">HOW IT WORKS</button>
-              <button onClick={() => { scrollTo('pricing'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">PRICING</button>
-              <button onClick={() => { scrollTo('courses'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">COURSES</button>
-              <button onClick={() => { scrollTo('professionals'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">PROFESSIONALS</button>
+            <div className="flex flex-col px-6 py-4 gap-4 text-sm font-semibold tracking-wider text-gray-300 uppercase">
+              <button onClick={() => { scrollTo('about'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('nav.about')}</button>
+              <button onClick={() => { scrollTo('how-it-works'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('nav.howItWorks')}</button>
+              <button onClick={() => { scrollTo('pricing'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('nav.pricing')}</button>
+              <button onClick={() => { scrollTo('courses'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('nav.courses')}</button>
+              <button onClick={() => { scrollTo('professionals'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('nav.professionals')}</button>
               <button onClick={() => { scrollTo('partners'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">PARTNERS</button>
-              <button onClick={() => { scrollTo('contact-form'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">CONTACT</button>
+              <button onClick={() => { scrollTo('contact-form'); setIsMobileMenuOpen(false); }} className="text-left hover:text-white py-2">{t('nav.contact')}</button>
               <div className="h-px bg-white/10 my-2"></div>
               <button 
                 onClick={() => { window.dispatchEvent(new CustomEvent('openNotifyMe')); setIsMobileMenuOpen(false); }}
                 className="text-left text-[#FFB800] py-2"
               >
-                NOTIFY ME
+                {t('hero.notifyMe')}
               </button>
               <button 
                 onClick={() => { scrollTo('contact-form'); setIsMobileMenuOpen(false); }}
