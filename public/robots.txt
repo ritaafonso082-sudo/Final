@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ais-dev-4wijrathv557rgdpfini4z-218771553661.europe-west3.run.app/sitemap.xml
+Sitemap: https://realbuilder-academy.com/sitemap.xml
