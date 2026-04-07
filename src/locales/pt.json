@@ -1,0 +1,711 @@
+{
+  "navbar": {
+    "about": "SOBRE",
+    "howItWorks": "COMO FUNCIONA",
+    "pricing": "PREÇOS",
+    "courses": "CURSOS",
+    "professionals": "PROFISSIONAIS",
+    "partners": "PARCEIROS",
+    "contact": "CONTACTO",
+    "notifyMe": "NOTIFICAR-ME",
+    "getStarted": "COMEÇAR"
+  },
+  "hero": {
+    "title": "O REAL BUILDER",
+    "subtitle": "Para indivíduos que querem competências reais.\nPara empresas que precisam de trabalhadores fiáveis.\n\nA {{brand}} transforma principiantes em construtores qualificados e certificados - totalmente equipados e prontos para elevar o padrão desde o primeiro dia.",
+    "registrationsOpen": "As inscrições estão abertas",
+    "registrationsOpenIn": "As inscrições abrem na <0>Feira Tektónica</0> em",
+    "days": "DIAS",
+    "hours": "HORAS",
+    "mins": "MINS",
+    "secs": "SEGS",
+    "exploreCourses": "EXPLORAR CURSOS",
+    "notifyMe": "NOTIFICAR-ME"
+  },
+  "about": {
+    "title": "SOBRE A {{brand}}",
+    "toBecome": "Tornar-se um {{brand}} é mais do que uma profissão.",
+    "mindset": "É uma mentalidade. Uma afirmação. Um estilo de vida.",
+    "career": "A {{brand}} trata de levar a sua carreira, o seu rendimento e os seus padrões pessoais para o próximo nível.",
+    "earnMore": "Para ganhar mais, deve tornar-se mais.",
+    "opportunity": "Esta é a sua oportunidade de desbloquear o seu potencial real — começando amanhã — e construir um futuro mais forte.",
+    "joining": "Ao juntar-se ao {{brand}}, torna-se parte de algo que nunca existiu antes:",
+    "generation": "Uma nova geração de profissionais da construção.",
+    "traits": "Inteligente. Com visão de negócio. Fisicamente forte. Mentalmente aguçado.",
+    "notJustWorker": "Não é apenas um trabalhador.",
+    "youAre": "VOCÊ É UM {{brand}}.",
+    "standard": "A {{brand}} é um novo padrão de personalidade.",
+    "stats": {
+      "courses": "CURSOS",
+      "graduates": "GRADUADOS",
+      "jobRate": "TAXA DE EMPREGO",
+      "partners": "PARCEIROS"
+    }
+  },
+  "courses": {
+    "title": "CURSOS",
+    "subtitle": "Domine competências especializadas em áreas da construção com elevada procura. Todos os cursos incluem teoria, prática e certificação.",
+    "certification": "Certificação",
+    "masteryTitle": "O que irá dominar:",
+    "notifyMe": "Notificar-me",
+    "list": [
+      { 
+        "name": "Ladrilho e Azulejo",
+        "mastery": [
+          "Domínio da preparação de superfícies",
+          "Corte de precisão e planeamento de layout",
+          "Técnicas de betumação e selagem",
+          "Design de padrões e instalação",
+          "Impermeabilização para áreas húmidas"
+        ]
+      },
+      { 
+        "name": "Estuque / Microcimento",
+        "mastery": [
+          "Acabamento de superfícies lisas",
+          "Criação de texturas decorativas",
+          "Aplicação de microcimento",
+          "Reparação de fissuras e restauro",
+          "Mistura e combinação de cores"
+        ]
+      },
+      { 
+        "name": "Limpeza Profissional",
+        "mastery": [
+          "Protocolos de limpeza pós-obra",
+          "Equipamento de limpeza industrial",
+          "Tratamentos específicos por superfície",
+          "Segurança e manuseamento de químicos",
+          "Padrões de inspeção de qualidade"
+        ]
+      },
+      { 
+        "name": "Assistente de Construção",
+        "mastery": [
+          "Organização e segurança no estaleiro",
+          "Manutenção e manuseamento de ferramentas",
+          "Preparação e mistura de materiais",
+          "Suporte estrutural básico",
+          "Gestão de resíduos e eficiência"
+        ]
+      },
+      { 
+        "name": "Alvenaria / Reboco",
+        "mastery": [
+          "Técnicas de assentamento de tijolo e bloco",
+          "Mistura e aplicação de argamassa",
+          "Construção de paredes estruturais",
+          "Reboco exterior e acabamento",
+          "Precisão no nivelamento e alinhamento"
+        ]
+      },
+      { 
+        "name": "Gesso Cartonado (Pladur)",
+        "mastery": [
+          "Instalação profissional de divisórias",
+          "Técnicas de sistemas de teto",
+          "Soluções resistentes ao fogo e acústicas",
+          "Acabamento de juntas e fitagem",
+          "Práticas de segurança padrão da indústria"
+        ]
+      },
+      { 
+        "name": "Estruturas (Framing)",
+        "mastery": [
+          "Estruturas em madeira e metal",
+          "Cálculos de carga estrutural",
+          "Padieiras de portas e janelas",
+          "Instalação de asnas de telhado",
+          "Esquadria e travamento de paredes"
+        ]
+      },
+      { 
+        "name": "Trabalhos em Aço",
+        "mastery": [
+          "Técnicas de corte e soldadura de aço",
+          "Montagem de aço estrutural",
+          "Construção de estruturas metálicas",
+          "Equipamento e protocolos de segurança",
+          "Leitura de projetos para estruturas de aço"
+        ]
+      },
+      { 
+        "name": "Gestão de Stock / Logística",
+        "mastery": [
+          "Sistemas de controlo de inventário",
+          "Coordenação da cadeia de abastecimento",
+          "Manuseamento e armazenamento de materiais",
+          "Agendamento e acompanhamento de entregas",
+          "Relações com fornecedores e compras"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "O SISTEMA REAL BUILDER",
+    "subtitle": "Tenha acesso aos nossos veículos totalmente equipados, preços de aluguer acessíveis e descontos exclusivos em equipamentos e materiais.",
+    "choosePath": "Escolha o Seu <0>Caminho</0>",
+    "from": "desde",
+    "month": "mês",
+    "oneTime": "pagamento único",
+    "selectPlan": "SELECIONAR PLANO",
+    "selectToContinue": "Por favor, selecione um caminho acima para continuar",
+    "plans": {
+      "bundle": {
+        "badge": "Melhor Valor",
+        "name": "Curso + Veículo e Adesão",
+        "priceNote": "O preço depende da escolha da solução de mobilidade"
+      },
+      "courseOnly": {
+        "badge": "Independente",
+        "name": "Apenas Curso",
+        "priceNote": "Certificação completa sem adesão"
+      }
+    },
+    "features": {
+      "fullCourse": "CURSO COMPLETO",
+      "certification": "CERTIFICAÇÃO",
+      "vehicle": "VEÍCULO",
+      "workshop": "ACESSO A OFICINA MÓVEL",
+      "marketing": "SUPORTE DE MARKETING GLOBAL",
+      "noVehicle": "Nenhum veículo incluído",
+      "noMembership": "Sem benefícios de adesão",
+      "noWorkshop": "Sem acesso a oficina móvel",
+      "membership": {
+        "title": "ADESÃO RB",
+        "details": "ID de Secção RB\nTablet com App RB\nDesconto na Loja Online\nFormação de acompanhamento 3x/ano\nVisível e Promovido no Website\nGuia de Manutenção"
+      },
+      "workwear": {
+        "title": "ROUPA DE TRABALHO",
+        "details": "Calças\nCapacete\nSapatos\nT-shirt\nColete"
+      },
+      "software": {
+        "title": "SOFTWARE DE GESTÃO",
+        "details": "Orçamentos\nFaturas\nGestão de Projetos\nPagamentos\nRegisto de Horas\nVerificação de Ferramentas"
+      },
+      "jobPlacement": {
+        "title": "SUPORTE NA COLOCAÇÃO PROFISSIONAL",
+        "details": "Trabalhar no Mundo\n\nInterno\nNacional\nInternacional"
+      }
+    },
+    "promo": {
+      "badge": "Oferta Especial",
+      "title": "Obtenha <0>100% DE DESCONTO</0>",
+      "description": "Aproveite esta oferta exclusiva!<br />Obtenha um desconto de 100% em<br /><0>qualquer curso</0> do seu interesse.",
+      "limited": "20 recebem 50% de desconto - 2 recebem 100%",
+      "cta": "RESERVE O SEU LUGAR"
+    },
+    "widget": {
+      "label": "Ação Necessária",
+      "cta": "Reclamar 100% de Desconto"
+    }
+  },
+  "howItWorks": {
+    "title": "Como",
+    "titleHighlight": "Funciona",
+    "subtitle": "Da experiência base a profissional certificado. Mais rápido do que imagina.",
+    "swipe": "Deslize para explorar",
+    "steps": {
+      "step1": {
+        "title": "Registo",
+        "description": "Inscreva-se e fale-nos sobre o seu percurso e objetivos. Iremos encontrar o caminho de formação certo para si."
+      },
+      "step2": {
+        "title": "Aprenda Competências",
+        "description": "Participe em aprendizagem presencial de alta intensidade em Português ou Inglês. Dos fundamentos de segurança a técnicas especializadas."
+      },
+      "step3": {
+        "title": "Treino no Local",
+        "description": "Formação prática ao fim de semana (Sex-Dom) com ferramentas reais e profissionais experientes."
+      },
+      "step4": {
+        "title": "CERTIFICADO",
+        "description": "Obtenha o seu Certificado RB1 após 1-4 fins de semana de formação. O seu primeiro marco para uma carreira profissional!"
+      },
+      "step5": {
+        "badge": "APENAS MEMBROS",
+        "title": "OBTENHA O SEU VEÍCULO",
+        "description": "Obtenha o seu veículo totalmente equipado para começar a trabalhar como um construtor profissional."
+      }
+    }
+  },
+  "enrollment": {
+    "title": "Inscreva-se na REAL BUILDER Academy",
+    "subtitle": "Preencha o formulário abaixo para iniciar a sua jornada como construtor certificado.",
+    "progress": "Conclusão do formulário",
+    "cancel": "Cancelar",
+    "error": "Ocorreu um erro ao submeter o formulário. Por favor, tente novamente.",
+    "success": {
+      "title": "Candidatura Recebida!",
+      "message": "Obrigado pelo seu interesse. Iremos notificá-lo quando as inscrições abrirem."
+    },
+    "sections": {
+      "personal": {
+        "title": "INFORMAÇÃO PESSOAL",
+        "firstName": "Primeiro Nome",
+        "firstNamePlaceholder": "João",
+        "lastName": "Apelido",
+        "lastNamePlaceholder": "Silva",
+        "email": "Email",
+        "emailPlaceholder": "joao@email.com",
+        "phone": "Telemóvel",
+        "phonePlaceholder": "+351 900 000 000",
+        "city": "Cidade",
+        "cityPlaceholder": "Lisboa"
+      },
+      "course": {
+        "title": "SELECIONE O SEU CURSO",
+        "subtitle": "Escolha em qual dos próximos cursos se gostaria de inscrever",
+        "options": {
+          "pladur": {
+            "title": "Fundamentos de Pladur e Gesso Cartonado",
+            "category": "Pladur / Gesso Cartonado",
+            "spots": "15 vagas restantes"
+          },
+          "tiles": {
+            "title": "Instalação Profissional de Azulejo",
+            "category": "Azulejos e Ladrilhos",
+            "spots": "15 vagas restantes"
+          },
+          "heating": {
+            "title": "Instalação de Piso Radiante",
+            "category": "Aquecimento de Piso",
+            "spots": "15 vagas restantes"
+          }
+        }
+      },
+      "skills": {
+        "title": "AVALIAÇÃO DE COMPETÊNCIAS",
+        "reading": {
+          "label": "Competências de Leitura",
+          "placeholder": "Selecione o seu nível de leitura"
+        },
+        "portuguese": {
+          "label": "Nível de Português"
+        },
+        "english": {
+          "label": "Nível de Inglês"
+        },
+        "digital": {
+          "label": "Competências Digitais",
+          "placeholder": "Selecione o seu nível de competências digitais",
+          "levels": {
+            "basic": "Básico (Consegue usar apps de smartphone)",
+            "intermediate": "Intermédio (Consegue usar email, software básico)",
+            "advanced": "Avançado (Confortável com novo software)"
+          }
+        },
+        "levels": {
+          "select": "Selecionar nível",
+          "none": "Nenhum",
+          "basic": "Básico",
+          "intermediate": "Intermédio",
+          "advanced": "Avançado",
+          "fluent": "Fluente"
+        }
+      },
+      "experience": {
+        "title": "EXPERIÊNCIA NA CONSTRUÇÃO",
+        "checkbox": "Tenho mais de 1 ano de experiência na construção",
+        "checkboxSub": "Experiência prévia em construção, renovação ou áreas relacionadas",
+        "uploadLabel": "Carregar Documentação de Experiência (opcional)",
+        "uploadCta": "Clique para carregar CV, certificados ou referências de trabalho",
+        "uploadLimits": "PDF, DOC, DOCX, JPG ou PNG (máx 10MB)"
+      },
+      "assistance": {
+        "title": "PRECISA DE ASSISTÊNCIA?",
+        "checkbox": "Faltam-me alguns requisitos e preciso de assistência",
+        "checkboxSub": "Não se preocupe! Podemos ajudá-lo a melhorar as suas competências antes do programa. Se não tiver a documentação necessária, completará um teste prático no local."
+      },
+      "commitment": {
+        "title": "COMPROMISSO",
+        "checkbox": "Tenho a mentalidade para mudar a minha vida",
+        "checkboxSub": "Estou comprometido em aprender, crescer e construir uma carreira de sucesso como um REAL BUILDER certificado"
+      }
+    },
+    "closed": {
+      "title": "Inscrições Atualmente Fechadas",
+      "message": "Obrigado pelo seu interesse! As inscrições para novos cursos abrirão em breve. Deixe os seus dados abaixo e iremos notificá-lo quando as inscrições abrirem.",
+      "processing": "A PROCESSAR...",
+      "cta": "AVISE-ME QUANDO AS INSCRIÇÕES ABRIREM"
+    }
+  },
+  "footer": {
+    "description": "Capacitar a próxima geração de construtores com competências práticas, veículos e oportunidades globais.",
+    "contact": {
+      "title": "Contacte-nos"
+    },
+    "legal": {
+      "title": "Legal",
+      "faq": "FAQ",
+      "terms": "Termos e Condições",
+      "privacy": "Política de Privacidade",
+      "complaints": "Livro de Reclamações"
+    },
+    "rights": "Todos os direitos reservados.",
+    "developedBy": "Website desenvolvido por"
+  },
+  "faq": {
+    "seo": {
+      "title": "Perguntas Frequentes",
+      "description": "Encontre respostas para perguntas frequentes sobre a Real Builder, a principal academia de construção em Portugal. Saiba mais sobre os nossos cursos, certificação e colocação profissional."
+    },
+    "title": "Perguntas",
+    "titleHighlight": "Frequentes",
+    "subtitle": "Tudo o que precisa de saber sobre a academia Real Builder, os nossos cursos e a sua futura carreira na construção.",
+    "items": [
+      {
+        "question": "O que é a Real Builder?",
+        "answer": "A <brand /> é uma academia de construção de elite em Portugal dedicada a transformar indivíduos com pouca ou nenhuma experiência em profissionais de construção certificados e prontos para o mercado de trabalho. Focamo-nos em formação prática intensiva para responder à elevada procura da indústria de construção moderna.",
+        "answerText": "A Real Builder é uma academia de construção de elite em Portugal dedicada a transformar indivíduos com pouca ou nenhuma experiência em profissionais de construção certificados e prontos para o mercado de trabalho. Focamo-nos em formação prática intensiva para responder à elevada procura da indústria de construção moderna."
+      },
+      {
+        "question": "Como funciona o processo de certificação?",
+        "answer": "O nosso processo de certificação está dividido em níveis (RB1, RB2, RB3). Começa com segurança fundamental e competências básicas, progredindo para técnicas especializadas em áreas como canalização, eletricidade, carpintaria e alvenaria. Cada nível exige a aprovação em exames práticos rigorosos.",
+        "answerText": "O nosso processo de certificação está dividido em níveis (RB1, RB2, RB3). Começa com segurança fundamental e competências básicas, progredindo para técnicas especializadas em áreas como canalização, eletricidade, carpintaria e alvenaria. Cada nível exige a aprovação em exames práticos rigorosos."
+      },
+      {
+        "question": "Preciso de experiência prévia na construção para me juntar?",
+        "answer": "Não é necessária experiência prévia para os nossos cursos fundamentais RB1. Damos as boas-vindas a qualquer pessoa com a mentalidade certa, prontidão física e vontade de aprender. Fornecemos todas as ferramentas e conhecimentos necessários desde o primeiro dia.",
+        "answerText": "Não é necessária experiência prévia para os nossos cursos fundamentais RB1. Damos as boas-vindas a qualquer pessoa com a mentalidade certa, prontidão física e vontade de aprender. Fornecemos todas as ferramentas e conhecimentos necessários desde o primeiro dia."
+      },
+      {
+        "question": "Qual é a taxa de colocação profissional após a graduação?",
+        "answer": "Orgulhamo-nos da nossa taxa de colocação profissional de 93%. Graças às nossas fortes parcerias com empresas líderes de construção em todo Portugal, os nossos <brandNoAcademy />s certificados têm caminhos diretos para empregos estáveis e bem remunerados imediatamente após a graduação.",
+        "answerText": "Orgulhamo-nos da nossa taxa de colocação profissional de 93%. Graças às nossas fortes parcerias com empresas líderes de construção em todo Portugal, os nossos Real Builders certificados têm caminhos diretos para empregos estáveis e bem remunerados imediatamente após a graduação."
+      },
+      {
+        "question": "Os cursos são ministrados em Inglês ou Português?",
+        "answer": "Para acomodar uma vasta gama de estudantes, incluindo locais e expatriados, os nossos programas de aprendizagem presencial de alta intensidade estão disponíveis tanto em Português como em Inglês.",
+        "answerText": "Para acomodar uma vasta gama de estudantes, incluindo locais e expatriados, os nossos programas de aprendizagem presencial de alta intensidade estão disponíveis tanto em Português como em Inglês."
+      },
+      {
+        "question": "Quanto tempo demora a obter a certificação?",
+        "answer": "A certificação inicial RB1 (Começar) demora normalmente entre 1 a 4 fins de semana, dependendo do percurso do curso específico. As certificações avançadas (RB2 e RB3) requerem módulos de formação especializada adicionais.",
+        "answerText": "A certificação inicial RB1 (Começar) demora normalmente entre 1 a 4 fins de semana, dependendo do percurso do curso específico. As certificações avançadas (RB2 e RB3) requerem módulos de formação especializada adicionais."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Termos e Condições",
+    "lastUpdated": "Última atualização",
+    "sections": {
+      "intro": {
+        "title": "Introdução",
+        "p1": "Bem-vindo à <brand />. Estes Termos e Condições regem o acesso e utilização do nosso website e dos serviços prestados pela <brand />, com sede na Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal.",
+        "p2": "Ao aceder e utilizar este website, o utilizador concorda em cumprir e ficar vinculado a estes Termos e Condições. Se não concordar com qualquer parte destes termos, não deve utilizar o nosso website."
+      },
+      "services": {
+        "title": "Serviços",
+        "p1": "A <brand /> oferece cursos de formação profissional na indústria da construção, incluindo, mas não se limitando a, instalação de pladur, azulejo e instalação de piso radiante.",
+        "p2": "A inscrição nos cursos está sujeita à disponibilidade, ao cumprimento dos requisitos de admissão e ao pagamento das respetivas propinas, quando aplicável."
+      },
+      "payments": {
+        "title": "Inscrições e Pagamentos",
+        "p1": "Ao submeter um formulário de inscrição, o utilizador garante que todas as informações fornecidas são verdadeiras, precisas e completas.",
+        "p2": "Condições específicas de pagamento, políticas de cancelamento e reembolso serão comunicadas ao utilizador no momento da formalização da inscrição no respetivo curso."
+      },
+      "intellectual": {
+        "title": "Propriedade Intelectual",
+        "p1": "Todo o conteúdo presente neste website, incluindo textos, gráficos, logótipos, ícones, imagens, clipes de áudio, downloads digitais e compilações de dados, é propriedade da <brand /> ou dos seus fornecedores de conteúdo e está protegido pelas leis de direitos de autor portuguesas e internacionais.",
+        "p2": "Não é permitida a reprodução, duplicação, cópia, venda, revenda ou exploração de qualquer parte do website para fins comerciais sem o nosso consentimento expresso por escrito."
+      },
+      "data": {
+        "title": "Proteção de Dados",
+        "p1": "A recolha e processamento de dados pessoais são realizados de acordo com a nossa Política de Privacidade, em estrito cumprimento do Regulamento Geral de Proteção de Dados (RGPD) e demais legislação aplicável."
+      },
+      "liability": {
+        "title": "Limitação de Responsabilidade",
+        "p1": "A <brand /> envida todos os esforços para garantir que a informação apresentada no website é precisa e atualizada. No entanto, não garantimos a ausência de erros ou omissões.",
+        "p2": "A <brand /> não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequentes resultantes da utilização ou incapacidade de utilizar este website ou os serviços oferecidos."
+      },
+      "changes": {
+        "title": "Alterações aos Termos",
+        "p1": "Reservamo-nos o direito de atualizar ou modificar estes Termos e Condições a qualquer momento, sem aviso prévio. A utilização continuada do website após quaisquer alterações constitui a aceitação dos novos Termos e Condições."
+      },
+      "law": {
+        "title": "Lei Aplicável e Jurisdição",
+        "p1": "Estes Termos e Condições são regidos e interpretados de acordo com a lei portuguesa. Para a resolução de qualquer litígio decorrente da interpretação ou execução destes Termos, é competente o foro da comarca de Faro, com renúncia expressa a qualquer outro."
+      },
+      "contacts": {
+        "title": "Contactos",
+        "p1": "Para qualquer questão relacionada com estes Termos e Condições, por favor contacte-nos através de:",
+        "phone": "Telemóvel",
+        "address": "Morada"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização",
+    "sections": {
+      "intro": {
+        "title": "Introdução",
+        "p1": "A <brand /> respeita a sua privacidade e está empenhada em proteger os seus dados pessoais. Esta Política de Privacidade explica como recolhemos, utilizamos, partilhamos e protegemos a sua informação pessoal quando visita o nosso website ou utiliza os nossos serviços, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD - Regulamento (UE) 2016/679)."
+      },
+      "controller": {
+        "title": "Responsável pelo Tratamento",
+        "p1": "A entidade responsável pelo tratamento dos seus dados pessoais é a <brand />, com sede na Avenida Mateus Teixeira Azevedo 55, Tavira, Portugal."
+      },
+      "dataCollect": {
+        "title": "Dados que Recolhemos",
+        "p1": "Podemos recolher e processar as seguintes categorias de dados pessoais:",
+        "items": {
+          "id": {
+            "label": "Dados de Identificação",
+            "value": "Nome, apelido."
+          },
+          "contact": {
+            "label": "Dados de Contacto",
+            "value": "Endereço de email, número de telemóvel, cidade, distrito."
+          },
+          "professional": {
+            "label": "Dados Profissionais e Académicos",
+            "value": "Nível de escolaridade, competências linguísticas, competências digitais, experiência na indústria da construção, currículo e certificados (quando submetidos)."
+          },
+          "navigation": {
+            "label": "Dados de Navegação",
+            "value": "Endereço IP, tipo de navegador, páginas visitadas e tempo gasto no nosso website (através de cookies)."
+          }
+        }
+      },
+      "purposes": {
+        "title": "Finalidades e Base Legal",
+        "p1": "Utilizamos os seus dados pessoais para as seguintes finalidades:",
+        "items": {
+          "enrollment": {
+            "label": "Gestão de Inscrições",
+            "value": "Para processar a sua candidatura aos nossos cursos e avaliar a sua elegibilidade. (Base legal: Execução de um contrato ou diligências pré-contratuais)."
+          },
+          "communication": {
+            "label": "Comunicação",
+            "value": "Para responder a pedidos de informação, enviar atualizações sobre cursos e notificá-lo sobre aberturas de inscrições. (Base legal: Consentimento ou interesse legítimo)."
+          },
+          "improvement": {
+            "label": "Melhoria do Serviço",
+            "value": "Para analisar a utilização do website e melhorar a experiência do utilizador. (Base legal: Interesse legítimo)."
+          },
+          "legal": {
+            "label": "Cumprimento Legal",
+            "value": "Para cumprir obrigações legais a que estamos sujeitos. (Base legal: Obrigação legal)."
+          }
+        }
+      },
+      "sharing": {
+        "title": "Partilha de Dados",
+        "p1": "Não vendemos, alugamos ou partilhamos os seus dados pessoais com terceiros para fins comerciais. Poderemos apenas partilhar os seus dados com:",
+        "items": {
+          "providers": "Prestadores de serviços que atuam em nosso nome (ex: serviços de alojamento web, plataformas de gestão de formulários como o Formspree).",
+          "authorities": "Autoridades competentes, quando exigido por lei."
+        }
+      },
+      "retention": {
+        "title": "Retenção de Dados",
+        "p1": "Retemos os seus dados pessoais apenas pelo período estritamente necessário para cumprir as finalidades para as quais foram recolhidos, ou para cumprir obrigações legais, fiscais ou regulatórias."
+      },
+      "rights": {
+        "title": "Os Seus Direitos",
+        "p1": "Ao abrigo do RGPD, tem o direito de:",
+        "items": {
+          "access": "Solicitar o acesso aos seus dados pessoais.",
+          "rectification": "Solicitar a retificação de dados imprecisos ou incompletos.",
+          "erasure": "Solicitar a eliminação dos seus dados (\"direito ao esquecimento\").",
+          "restriction": "Solicitar a limitação do tratamento.",
+          "object": "Opor-se ao tratamento dos seus dados.",
+          "portability": "Solicitar a portabilidade dos dados.",
+          "withdraw": "Retirar o consentimento a qualquer momento (sem afetar a licitude do tratamento baseado no consentimento antes da sua retirada)."
+        },
+        "p2": "Para exercer estes direitos, por favor contacte-nos por telefone através do número +351 939 996 924. Tem também o direito de apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD) em Portugal."
+      },
+      "security": {
+        "title": "Segurança",
+        "p1": "Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra a destruição, perda, alteração, divulgação ou acesso não autorizados."
+      },
+      "changes": {
+        "title": "Alterações a esta Política",
+        "p1": "Poderemos atualizar esta Política de Privacidade periodicamente. Recomendamos que consulte esta página regularmente para se manter informado sobre como protegemos os seus dados."
+      }
+    }
+  },
+  "pilot": {
+    "badge": "Oportunidade Limitada",
+    "title": "Junte-se ao <brand /> <br /> <span />Programa Piloto! Apenas 3 vagas!</span>",
+    "subtitle": "Formação gratuita e contrato de trabalho!",
+    "benefits": {
+      "item1": "Torne-se o primeiro <brand /> Certificado",
+      "item2": "Faça parte da próxima geração de profissionais da construção",
+      "item3": "Ganhe de 1200€ a 2000€ mensais"
+    },
+    "warning": "Importante: O programa é intensivo (10 horas/dia). Procuramos profissionais dedicados e prontos para se comprometerem.",
+    "form": {
+      "title": "Candidatar-se Agora",
+      "fields": {
+        "firstName": {
+          "label": "Primeiro Nome",
+          "placeholder": "João"
+        },
+        "lastName": {
+          "label": "Apelido",
+          "placeholder": "Silva"
+        },
+        "phone": {
+          "label": "Número de Telefone"
+        },
+        "email": {
+          "label": "Email"
+        },
+        "city": {
+          "label": "Cidade",
+          "placeholder": "Lisboa"
+        },
+        "experience": {
+          "label": "Anos de Experiência",
+          "placeholder": "Selecione a experiência...",
+          "options": {
+            "lessThan1": "Menos de 1 ano",
+            "1to3": "1-3 anos",
+            "3to5": "3-5 anos",
+            "moreThan5": "Mais de 5 anos"
+          },
+          "error": "Faltam-me alguns requisitos e preciso de assistência"
+        },
+        "tavira": {
+          "label": "Disponível para trabalhar em Tavira?",
+          "yes": "Sim",
+          "no": "Não"
+        },
+        "immediate": {
+          "label": "Disponível para começar imediatamente?",
+          "yes": "Sim",
+          "no": "Não"
+        }
+      },
+      "areas": {
+        "label": "Áreas de Interesse (Selecione até 2)",
+        "items": {
+          "tiler": "Ladrilhador",
+          "carpenter": "Carpinteiro",
+          "drywall": "Instalador de Pladur",
+          "plaster": "Especialista em Estuque/Microcimento"
+        }
+      },
+      "submit": "SUBMETER CANDIDATURA",
+      "error": "Ocorreu um erro ao submeter o formulário. Por favor, tente novamente.",
+      "success": {
+        "title": "Candidatura Recebida!",
+        "message": "Obrigado por se candidatar ao Programa Piloto da <brand />. Iremos analisar a sua candidatura e contactá-lo em breve."
+      }
+    },
+    "mobility": {
+      "title": {
+        "part1": "Escolha a Sua",
+        "part2": "Solução de Mobilidade"
+      },
+      "month": "mês",
+      "popular": "MAIS POPULAR",
+      "vehicles": {
+        "toolbox": {
+          "name": "Caixa de Ferramentas Móvel",
+          "desc": "RB STARTER"
+        },
+        "wheeler": {
+          "name": "Triciclo Elétrico",
+          "desc": "NEGÓCIO URBANO PARA 1-2 PESSOAS"
+        },
+        "buggy": {
+          "name": "Buggy / Moto 4 de Ferramentas",
+          "desc": "NEGÓCIO URBANO PARA 1-4 PESSOAS"
+        },
+        "van": {
+          "name": "Carrinha de Ferramentas",
+          "desc": "NEGÓCIO MULTI... PARA 1-4 PESSOAS"
+        }
+      }
+    },
+    "nextCourses": {
+      "title": "PRÓXIMOS CURSOS",
+      "important": "INÍCIO IMPORTANTE",
+      "registrationStart": "Início das Inscrições",
+      "notifyMe": "NOTIFICAR-ME",
+      "status": {
+        "open": "As Inscrições Estão Abertas",
+        "opensIn": "As Inscrições Abrem em"
+      },
+      "fields": {
+        "date": "Data",
+        "time": "Hora",
+        "location": "Localização"
+      },
+      "dates": {
+        "apr24": "24 de Abril de 2026",
+        "time": "18:00 (Hora de Lisboa)",
+        "location": "Feira Tektónica - Parque Das Nações - Lisboa"
+      },
+      "countdown": {
+        "days": "DIAS",
+        "hours": "HORAS",
+        "mins": "MINS",
+        "secs": "SEGS"
+      },
+      "calendar": {
+        "title": "Calendário de Cursos",
+        "expand": "EXPANDIR",
+        "viewAll": "VER TODAS AS DATAS",
+        "toBeDefined": "A definir",
+        "months": {
+          "apr": "Abr",
+          "may": "Mai",
+          "jun": "Jun",
+          "full": {
+            "apr": "Abril",
+            "may": "Maio",
+            "jun": "Junho"
+          }
+        },
+        "events": {
+          "opening": "Abertura da \"Feira Tektónica\"",
+          "first2": "Primeiros 2 Cursos",
+          "next2": "Próximos 2 Cursos"
+        }
+      },
+      "modal": {
+        "title": "Calendário Completo de Cursos",
+        "subtitle": "Próximas datas para todas as certificações <brand />",
+        "event": "Evento",
+        "start": "Início",
+        "newSeason": "Nova Temporada",
+        "nextPhase": "Próxima Fase"
+      }
+    },
+    "professionals": {
+      "title": {
+        "part1": "Profissionais Certificados",
+        "part2": "Perto de Si"
+      },
+      "subtitle": "Explore a nossa rede de <brand /> certificados em todo o Portugal. Cada profissional concluiu o nosso rigoroso programa de certificação.",
+      "filters": {
+        "all_professions": "Todas as Profissões",
+        "electrician": "Eletricista",
+        "plumber": "Canalizador",
+        "carpenter": "Carpinteiro",
+        "mason": "Pedreiro",
+        "painter": "Pintor",
+        "roofer": "Telhador",
+        "welder": "Soldador",
+        "tiler": "Ladrilhador"
+      },
+      "map": {
+        "legend": "Níveis de Certificado"
+      },
+      "list": {
+        "title": "Construtores em Lisboa",
+        "count": "{{count}} profissionais",
+        "comingSoon": "EM BREVE"
+      },
+      "training": {
+        "alt": "Construtor em formação {{index}}",
+        "caption": "CONSTRUTORES EM FORMAÇÃO"
+      }
+    }
+  }
+}

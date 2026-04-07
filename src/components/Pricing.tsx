@@ -1,8 +1,10 @@
-import { Check, X, Globe, X as CloseIcon, CheckCircle2 } from 'lucide-react';
+import { Check, X, Globe, X as CloseIcon } from 'lucide-react';
 import { motion, useInView, AnimatePresence } from 'motion/react';
 import { useState, useRef, useEffect } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function Pricing() {
+  const { t } = useTranslation();
   const [showPromo, setShowPromo] = useState(false);
   const [hasDismissedPromo, setHasDismissedPromo] = useState(false);
   const [hasPromoAppeared, setHasPromoAppeared] = useState(false);
@@ -51,10 +53,10 @@ export default function Pricing() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight uppercase">
-              THE REAL BUILDER SYSTEM
+              {t('pricing.title')}
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Get access to our fully equipped vehicles, affordable rental prices, and exclusive discounts on equipment & materials.
+              {t('pricing.subtitle')}
             </p>
           </motion.div>
 
@@ -65,7 +67,11 @@ export default function Pricing() {
             transition={{ delay: 0.2 }}
             className="text-center mb-12"
           >
-            <h3 className="text-2xl font-bold text-white">Choose Your <span className="text-[#FFB800]">Path</span></h3>
+            <h3 className="text-2xl font-bold text-white">
+              <Trans i18nKey="pricing.choosePath">
+                Choose Your <span className="text-[#FFB800]">Path</span>
+              </Trans>
+            </h3>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -79,67 +85,67 @@ export default function Pricing() {
             >
               <div className="absolute -top-3 left-6 bg-[#FFB800] text-black text-xs font-bold px-3 py-1 rounded-md flex items-center gap-1">
                 <span className="w-3 h-3 rounded-full border border-black flex items-center justify-center text-[8px]">M</span>
-                Best Value
+                {t('pricing.plans.bundle.badge')}
               </div>
               
-              <h4 className="text-xl font-bold text-white mb-6">Course + Vehicle & Membership</h4>
+              <h4 className="text-xl font-bold text-white mb-6">{t('pricing.plans.bundle.name')}</h4>
               
               <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mb-2">
-                <span className="text-gray-400 text-xs sm:text-sm">from</span>
+                <span className="text-gray-400 text-xs sm:text-sm">{t('pricing.from')}</span>
                 <span className="text-[#FFB800] text-3xl sm:text-4xl font-bold">€249</span>
                 <span className="text-gray-400">-</span>
                 <span className="text-[#FFB800] text-3xl sm:text-4xl font-bold">€589</span>
-                <span className="text-gray-400 text-xs sm:text-sm">/ month</span>
+                <span className="text-gray-400 text-xs sm:text-sm">/ {t('pricing.month')}</span>
               </div>
-              <p className="text-gray-500 text-xs mb-8">Price depends on mobility solution choice</p>
+              <p className="text-gray-500 text-xs mb-8">{t('pricing.plans.bundle.priceNote')}</p>
 
               <ul className="space-y-4 mb-10 flex-grow">
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> FULL COURSE
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> {t('pricing.features.fullCourse')}
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> CERTIFICATION
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> {t('pricing.features.certification')}
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> VEHICLE
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> {t('pricing.features.vehicle')}
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold relative group cursor-help">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">RB MEMBERSHIP</u>
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">{t('pricing.features.membership.title')}</u>
                   <div className="absolute bottom-full left-0 mb-2 w-56 bg-[#1a1d21] border border-white/10 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-xl">
                     <div className="text-xs font-normal text-gray-300 whitespace-pre-line leading-relaxed">
-                      RB Section ID{"\n"}Tablet with RB App{"\n"}Online Shop Discount{"\n"}Follow Up training 3x/year{"\n"}Visible and Promoted on Website{"\n"}Guide Maintenance
+                      {t('pricing.features.membership.details')}
                     </div>
                   </div>
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold relative group cursor-help">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">WORKWEAR</u>
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">{t('pricing.features.workwear.title')}</u>
                   <div className="absolute bottom-full left-0 mb-2 w-48 bg-[#1a1d21] border border-white/10 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-xl">
                     <div className="text-xs font-normal text-gray-300 whitespace-pre-line leading-relaxed">
-                      Pants{"\n"}Helmet{"\n"}Shoes{"\n"}Shirt{"\n"}Vest
+                      {t('pricing.features.workwear.details')}
                     </div>
                   </div>
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold relative group cursor-help">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">PM SOFTWARE</u>
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">{t('pricing.features.software.title')}</u>
                   <div className="absolute bottom-full left-0 mb-2 w-48 bg-[#1a1d21] border border-white/10 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-xl">
                     <div className="text-xs font-normal text-gray-300 whitespace-pre-line leading-relaxed">
-                      Quotes{"\n"}Invoice{"\n"}Project Management{"\n"}Payments{"\n"}Time Tracking{"\n"}Tool Check Up
+                      {t('pricing.features.software.details')}
                     </div>
                   </div>
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> MOBILE WORKSHOP ACCESS
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> {t('pricing.features.workshop')}
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold relative group cursor-help">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">JOB PLACEMENT SUPPORT</u>
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> <u className="decoration-[#FFB800] underline-offset-4">{t('pricing.features.jobPlacement.title')}</u>
                   <div className="absolute bottom-full left-0 mb-2 w-48 bg-[#1a1d21] border border-white/10 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-xl">
                     <div className="text-xs font-normal text-gray-300 whitespace-pre-line leading-relaxed">
-                      Work in the World{"\n\n"}Internal{"\n"}National{"\n"}International
+                      {t('pricing.features.jobPlacement.details')}
                     </div>
                   </div>
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Globe size={16} className="text-[#FFB800] shrink-0" /> GLOBAL MARKETING SUPPORT
+                  <Globe size={16} className="text-[#FFB800] shrink-0" /> {t('pricing.features.marketing')}
                 </li>
               </ul>
 
@@ -147,7 +153,7 @@ export default function Pricing() {
                 onClick={() => handleSelectPlan('course_vehicle')}
                 className="w-full bg-[#FFB800] text-black py-4 rounded-xl font-bold tracking-widest hover:bg-[#FFB800]/90 transition-colors"
               >
-                SELECT PLAN
+                {t('pricing.selectPlan')}
               </button>
             </motion.div>
 
@@ -161,32 +167,32 @@ export default function Pricing() {
             >
               <div className="absolute -top-3 left-6 bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-md flex items-center gap-1">
                  <span className="w-3 h-3 rounded-full border border-white flex items-center justify-center text-[8px]">I</span>
-                Independent
+                {t('pricing.plans.courseOnly.badge')}
               </div>
               
-              <h4 className="text-xl font-bold text-white mb-6">Course Only</h4>
+              <h4 className="text-xl font-bold text-white mb-6">{t('pricing.plans.courseOnly.name')}</h4>
               
               <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mb-2">
                 <span className="text-[#FFB800] text-3xl sm:text-4xl font-bold">€899</span>
-                <span className="text-gray-400 text-xs sm:text-sm">one-time</span>
+                <span className="text-gray-400 text-xs sm:text-sm">{t('pricing.oneTime')}</span>
               </div>
-              <p className="text-gray-400 text-xs mb-8">Full certification without membership</p>
+              <p className="text-gray-400 text-xs mb-8">{t('pricing.plans.courseOnly.priceNote')}</p>
 
               <ul className="space-y-4 mb-10 flex-grow">
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> FULL COURSE
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> {t('pricing.features.fullCourse')}
                 </li>
                 <li className="flex items-center gap-3 text-white text-xs sm:text-sm font-semibold">
-                  <Check size={16} className="text-[#22c55e] shrink-0" /> CERTIFICATION
+                  <Check size={16} className="text-[#22c55e] shrink-0" /> {t('pricing.features.certification')}
                 </li>
                 <li className="flex items-center gap-3 text-gray-500 text-xs sm:text-sm">
-                  <X size={16} className="shrink-0" /> No vehicle included
+                  <X size={16} className="shrink-0" /> {t('pricing.features.noVehicle')}
                 </li>
                 <li className="flex items-center gap-3 text-gray-500 text-xs sm:text-sm">
-                  <span className="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center text-[8px] shrink-0">M</span> No membership benefits
+                  <span className="w-4 h-4 rounded-full border border-gray-500 flex items-center justify-center text-[8px] shrink-0">M</span> {t('pricing.features.noMembership')}
                 </li>
                 <li className="flex items-center gap-3 text-gray-500 text-xs sm:text-sm">
-                  <X size={16} className="shrink-0" /> No mobile workshop access
+                  <X size={16} className="shrink-0" /> {t('pricing.features.noWorkshop')}
                 </li>
               </ul>
 
@@ -194,7 +200,7 @@ export default function Pricing() {
                 onClick={() => handleSelectPlan('course_only')}
                 className="w-full bg-white/5 border border-white/10 text-white py-4 rounded-xl font-bold tracking-widest hover:bg-white/10 transition-colors"
               >
-                SELECT PLAN
+                {t('pricing.selectPlan')}
               </button>
             </motion.div>
           </div>
@@ -206,7 +212,7 @@ export default function Pricing() {
             transition={{ delay: 0.8 }}
             className="text-center mt-4 md:mt-8 mb-16 md:mb-0 text-gray-500 text-sm"
           >
-            Please select a path above to continue
+            {t('pricing.selectToContinue')}
           </motion.div>
         </div>
       </div>
@@ -236,23 +242,27 @@ export default function Pricing() {
               
               <div className="relative z-10">
                 <div className="inline-block bg-[#FFB800]/10 border border-[#FFB800]/30 text-[#FFB800] text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full mb-6">
-                  Special Offer
+                  {t('pricing.promo.badge')}
                 </div>
                 
                 <h4 className="text-white font-black text-3xl md:text-4xl mb-4 tracking-tight uppercase">
-                  Get <span className="text-[#FFB800]">100% OFF</span>
+                  <Trans i18nKey="pricing.promo.title">
+                    Get <span className="text-[#FFB800]">100% OFF</span>
+                  </Trans>
                 </h4>
                 
                 <p className="text-gray-300 text-base mb-6 leading-relaxed">
-                  Claim this exclusive offer!<br />
-                  Get a 100% discount on<br />
-                  <strong>any course</strong> of your interest.
+                  <Trans i18nKey="pricing.promo.description">
+                    Claim this exclusive offer!<br />
+                    Get a 100% discount on<br />
+                    <strong>any course</strong> of your interest.
+                  </Trans>
                 </p>
 
                 <div className="bg-red-500/10 border border-red-500/20 rounded-lg py-3 px-4 mb-8">
                   <span className="text-red-500 text-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                    20 get 50% off - 2 get 100% off
+                    {t('pricing.promo.limited')}
                   </span>
                 </div>
                 
@@ -264,7 +274,7 @@ export default function Pricing() {
                   }}
                   className="w-full bg-[#FFB800] text-black font-black py-4 rounded-xl text-lg tracking-widest hover:bg-white transition-colors shadow-[0_0_20px_rgba(255,184,0,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
                 >
-                  CLAIM YOUR SPOT
+                  {t('pricing.promo.cta')}
                 </button>
               </div>
             </motion.div>
@@ -301,10 +311,10 @@ export default function Pricing() {
             >
               <div className="flex flex-col items-start text-left relative z-10">
                 <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] mb-1">
-                  Action Required
+                  {t('pricing.widget.label')}
                 </span>
                 <span className="text-sm font-black tracking-widest uppercase text-[#FFB800]">
-                  Claim 100% Off
+                  {t('pricing.widget.cta')}
                 </span>
               </div>
             </motion.button>
